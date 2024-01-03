@@ -1,10 +1,10 @@
 class Library:
-    def __init__(self,book_name,book_id,book_author,book_publisher,bookpublisher_date,borrow_if,borrow_date,borrow_ddl,book_location,student_name,student_id,student_email):
+    def __init__(self, book_name, book_id, book_author, book_publisher, book_publisher_date, borrow_if, borrow_date, borrow_ddl, book_location, student_name, student_id, student_email):
         self.book_name = book_name
         self.book_id = book_id
         self.book_author = book_author
         self.book_publisher = book_publisher
-        self.bookpublisher_date = bookpublisher_date
+        self.book_publisher_date = book_publisher_date
         self.borrow_if = borrow_if
         self.borrow_date = borrow_date
         self.borrow_ddl = borrow_ddl
@@ -12,7 +12,7 @@ class Library:
         self.student_name = student_name
         self.student_id = student_id
         self.student_email = student_email
-        
+
     def get_book_name(self):
         return self.book_name
     
@@ -26,7 +26,7 @@ class Library:
         return self.book_publisher
     
     def get_publisher_date(self):
-        return self.bookpublisher_date
+        return self.book_publisher_date
     
     def is_borrowed(self):
         return self.borrow_if
@@ -39,11 +39,20 @@ class Library:
     
     def get_location(self):
         return self.book_location
-    
-# 建立物件
-b1= Library('PYTHON','111','Author','Publisher','2022-01-01','Yes','2023-01-01','2023-02-01','A103','Sname','Sid','Semail')
 
-# 使用新的副函式取得資訊
+    def set_borrow_date(self, new_borrow_date):
+        self.borrow_date = new_borrow_date
+
+    def set_borrow_deadline(self, new_borrow_ddl):
+        self.borrow_ddl = new_borrow_ddl
+
+    def set_borrow_status(self, new_borrow_status):
+        self.borrow_if = new_borrow_status
+
+# 建立物件
+b1 = Library('PYTHON', '111', 'Author', 'Publisher', '2022-01-01', 'Yes', '2023-01-01', '2023-02-01', 'A103', 'Sname', 'Sid', 'Semail')
+
+# 使用屬性取值方法取得資訊
 print("書名:", b1.get_book_name())
 print("書ID:", b1.get_book_id())
 print("作者:", b1.get_book_author())
@@ -54,3 +63,15 @@ print("借出日期:", b1.get_borrow_date())
 print("還書期限:", b1.get_borrow_deadline())
 print("館藏位置:", b1.get_location())
 
+# 使用修改的副函式來更新資訊
+print("\n修改前是否借出:", b1.is_borrowed())
+b1.set_borrow_status('No')  # 修改借閱狀態
+print("修改後是否借出:", b1.is_borrowed())
+
+print("修改前借出日期:", b1.get_borrow_date())
+b1.set_borrow_date('2023-02-15')  # 修改借出日期
+print("修改後借出日期:", b1.get_borrow_date())
+
+print("修改前還書期限:", b1.get_borrow_deadline())
+b1.set_borrow_deadline('2023-03-15')  # 修改還書期限
+print("修改後還書期限:", b1.get_borrow_deadline())
