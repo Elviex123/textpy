@@ -1,6 +1,7 @@
 #考試版
 #注意縮排和是否有冒號,class&def最後要:
 #print加上屬性後要加()
+#副函式一律get_  return 
 
 
 class Library:
