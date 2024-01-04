@@ -12,7 +12,8 @@ l1=Library('BOOK','IDD')
 print("書名",l1.get_book())
 print("書ID",l1.get_id())
 
-"""副函式EX
+"""
+副函式EX
 class A(object):
     #副函式定義，名稱為method1，參數有a,b,c
     def method1(self, a, b, c):
@@ -26,6 +27,4 @@ b=2
 c=3
 result = obj1.method1(a, b, c) #呼叫副函式method1,將結果存入變數result中
 print(result) 
-#列印結果
-
 """
