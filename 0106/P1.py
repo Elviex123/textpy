@@ -16,11 +16,12 @@ class Game:
     #玩家人數
     def get_game_people(self):
         return self.game_people
-    
+#定義物件
 G1=Game('遊戲1','2:00','10')
 G2=Game('遊戲2','5:30','12')
 G3=Game("遊戲3",'8:00','8')
 
+#列印資訊
 print("1-遊戲名稱:",G1.get_game_name())
 print("1-開始時間:",G1.get_start_time())
 print("1-玩家人數:",G1.get_game_people())
