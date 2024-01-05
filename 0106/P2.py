@@ -1,8 +1,3 @@
-
-"""
-輸入行李ID ,輸出所有資訊
-主函示3個物件 使用查詢行李和修改資訊對每一個屬性寫修改資訊的副函示共五個 查詢行李
-"""
 #行李類別
 class Luggage:
     def __init__(self,lg_id,lg_weight,lg_start_airport,lg_last_airport,lg_name):
@@ -69,7 +64,6 @@ class Boardingpass:
     #行李ID
     def get_luggage_id(self):
         return self._luggage_id
-    
 #主函式
 def main():  
     #定義行李資訊
@@ -132,12 +126,3 @@ def main():
 
 if __name__=="__main__":
     main()
-
-"""
--列印資訊
-- 修改的副函示
-    -個列印富含是&
-    修改副函式
-    -主函示MAIN中建立2-3個登機證物件 
-    -分別呼叫14(7*2)個副函式屬姓
-    """
